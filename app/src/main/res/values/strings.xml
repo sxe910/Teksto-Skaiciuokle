@@ -6,6 +6,7 @@
     <string name="errorEmpty"> Įvesties laukas negali būti tuščias </string>
 
     <string-array name="metricOptions">
+        <item>Pasirinkite skaičiavimo būdą</item>
         <item>Sakinių skaičius</item>
         <item>Žodžių skaičius</item>
         <item>Rašybos ženklų skaičius</item>
