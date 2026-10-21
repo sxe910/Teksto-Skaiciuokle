@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Teksto Skaiciuokle</string>
+    <string name="inputText">Įveskite tekstą</string>
+    <string name="buttonCount">Skaičiuoti</string>
+    <string name="resultDefault">Rezultatas bus rodomas</string>
+    <string name="errorEmpty"> Įvesties laukas negali būti tuščias </string>
+
+    <string-array name="metricOptions">
+        <item>Sakinių skaičius</item>
+        <item>Žodžių skaičius</item>
+        <item>Rašybos ženklų skaičius</item>
+        <item>Skaičių skaičius</item>
+    </string-array>
+</resources>
