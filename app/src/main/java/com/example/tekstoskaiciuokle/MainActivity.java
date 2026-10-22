@@ -59,7 +59,10 @@ public class MainActivity extends AppCompatActivity {
 
         int counterResult=0;
         switch (spinnerMetric.getSelectedItemPosition()){
+            case 1: counterResult = analyzer.sentenceCounter(text); break;
             case 2: counterResult = analyzer.wordCounter(text); break;
+            case 3: counterResult = analyzer.punctuationCounter(text); break;
+            case 4: counterResult = analyzer.digitCounter(text); break;
         }
         String metricName = spinnerMetric.getSelectedItem().toString();
         textViewResult.setText(String.valueOf(counterResult));
