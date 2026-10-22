@@ -15,10 +15,14 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 
+
+
 public class MainActivity extends AppCompatActivity {
     EditText editTextInput;
     Spinner spinnerMetric;
     TextView textViewResult;
+    private TextAnalyzer analyzer;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         spinnerMetric = findViewById(R.id.spinnerMetric);
         textViewResult = findViewById(R.id.textView);
         Button buttonCount = findViewById(R.id.buttonCount);
-
+        analyzer = new TextAnalyzer();
         buttonCount.setOnClickListener( new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,7 +54,17 @@ public class MainActivity extends AppCompatActivity {
 
         if (text.trim().isEmpty()) {
             Toast.makeText(this, R.string.errorEmpty, Toast.LENGTH_SHORT).show();
+            return;
         }
+
+        int counterResult=0;
+        switch (spinnerMetric.getSelectedItemPosition()){
+            case 2: counterResult = analyzer.wordCounter(text); break;
+        }
+        String metricName = spinnerMetric.getSelectedItem().toString();
+        textViewResult.setText(String.valueOf(counterResult));
+
+
 
 
 
